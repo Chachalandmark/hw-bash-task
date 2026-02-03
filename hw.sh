@@ -1,15 +1,31 @@
 #!/bin/bash
 
+##TASK -1 1
+# # echo "Hello World!!" > hello.txt
+
+# MESSAGE="$1"
+
+# if [ -z "$MESSAGE" ]; then
+#     MESSAGE="This is the message from me!!"
+# fi
 
 
-MESSAGE="$1"
+# echo "$MESSAGE" > message.txt
+# echo "User Message: $MESSAGE"
+# cat message.txt
 
-if [-z "$MESSAGE"]; then
-    MESSAGE="hello-world"
+### TASK 3
+
+# ARG1="$1"
+# ARG2="$2"
+# ARG3="$3"
+
+if [ "$#" -eq 0 ]; then
+    echo "Use it: ./hw.sh <arg1> "
+    exit 1
+
 fi
 
-# echo "Hello World!!" > hello.txt
-
-echo "$MESSAGE" > message.txt
-echo "User Message: $MESSAGE"
-cat message.txt
+for arg in "$@"; do
+    echo "$arg"
+done
